@@ -1,0 +1,43 @@
+
+window.addEventListener('load', function(){
+  new Glider(document.querySelector('.carousel__lista'), {
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      draggable: false,
+      dots: '.carousel__indicadores',
+      arrows: {
+          prev: '.carousel__anterior',
+          next: '.carousel__siguiente'
+      },
+      responsive: [
+          {
+            // screens greater than >= 775px
+            breakpoint: 450,
+            settings: {
+              // Set to `auto` and provide item width to adjust to viewport
+              slidesToShow: 2,
+              slidesToScroll: 2,
+              itemWidth: 150,
+              duration: 0.25
+            }
+          },{
+            // screens greater than >= 1024px
+            breakpoint: 800,
+            settings: {
+              slidesToShow: 5,
+              slidesToScroll: 2,
+              itemWidth: 150,
+              duration: 0.25
+            }
+          }
+        ]
+  });
+});
+
+document.querySelector('.lista-estilos').addEventListener("click", (event) => {
+    event.preventDefault();
+    document.querySelector('.caja-lista-estilos').classList.toggle("show");
+    document.querySelector('.fa-chevron-down').classList.toggle('active');
+});
+  
+

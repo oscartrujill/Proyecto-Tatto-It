@@ -1,0 +1,595 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .navbar{
+    display: flex;
+    background: white;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    font-family: sans-serif;
+  }
+  .logo{
+    font-weight: bolder;
+    padding: 10px;
+    padding-left: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+  }
+  .logo a{
+  text-decoration: none;
+  color: black;
+  }
+  .menu{
+    display: flex;
+    padding: 15px 15px;
+  }
+  .menu a{
+    text-decoration: none;
+    color: black;
+  }
+  .menu li{
+    margin: 0 5px;
+    list-style: none;
+  }
+  .menu li ul{
+  display: none;
+  position: absolute;
+  background: white;
+  }
+  .menu li:hover > ul{
+  display: block;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  }
+  .menu li ul li{
+  margin: 10px;
+  position: relative;
+  }
+  .menu a:hover{
+    border-bottom: 1px solid black;
+  }
+  .sign{
+    display: flex;
+    margin-left: auto;
+    margin-right: 10px;
+    padding: 15px 15px;
+  }
+  .sign li{
+    margin: 0 5px;
+    list-style: none;
+  }
+  .sign a{
+    text-decoration: none;
+    color: black;
+  }
+  .sign a:hover{
+    border-bottom: 1px solid black;
+  }
+  .contacto{
+  color: rgb(248, 244, 244);
+  background: rgba(44, 44, 46, 0.7);
+  backdrop-filter: blur(5px);
+  text-align: center;
+  width: 15vw;
+  height: 18vh;
+  border: 1px solid rgb(61, 52, 52);
+  padding: 10px 5px 15px 5px;
+  right: 0px;
+  bottom: 0px;
+  position: fixed;
+  border-radius: 5px;
+  z-index: 500;
+  }
+  .whatsapp{
+  margin-top: 13px;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  width: 100%;
+  }
+  .whatsapp img{
+  height: 30px;
+  border-radius: 8px;
+  }
+  .whatsapp div{
+  color: white;
+  border: 1px solid black;
+  padding: 4px;
+  border-radius: 4px;
+  background: rgb(36, 185, 36);
+  }
+  .whatsapp div:hover{
+  background: green;
+  }
+  .whatsapp div a{
+  text-decoration: none;
+  color: white;
+  } 
+  
+  .footer-listas{
+  height: 40vh;
+  display: flex;
+  font-size: 120%;
+  }
+  .footer .footer-listas .foo-list{
+  margin: 50px;
+  margin-left: 100px
+  }
+  .footer ul{
+  margin-top: 35px;
+  }
+  .footer li{
+  list-style: none;
+  padding-top: 10px; 
+  }
+  .footer li a{
+  text-decoration: none;
+  color: black;
+  }
+  .footer li a:hover{
+  color: darkred;
+  }
+  .footer-logo p{
+  font-size: 300%;
+  font-weight: 600;
+  margin: 40px;
+  margin-left: 40px;
+  margin-bottom: 50px;
+  }
+  .footer-logo h3{
+  margin: 30px;
+  }
+  
+  .footer .social div{
+  margin-top: 40px; 
+  width: 100%;
+  }
+  .footer .social a{
+  text-decoration: none;
+  padding-right: 7px;
+  font-size: 30px;
+  }
+  
+  
+  
+  /*estilos*/
+  .caja_busqueda{
+  text-align: center;
+  }
+  .caja_busqueda h1 {
+  margin: 20px;
+  }
+  .caja_busqueda .caja-form{
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  }
+  .caja_busqueda .form-busqueda{
+  border: 1px solid rgba(128, 128, 128, 0.76);
+  position: relative;
+  height: 50px;
+  padding: 0 15px;
+  margin: auto;
+  width: 30%;
+  border-radius: 25px;
+  display: flex;
+  }
+  .caja_busqueda .form-busqueda input{
+  width: 90%;
+  height: 50px;
+  margin: 0;
+  border: 0;
+  background: transparent;
+  font-size: 20px;
+  outline: none;
+  }
+  .caja_busqueda .form-busqueda input::placeholder{
+  font-size: 20px;
+  }
+  .caja_busqueda .form-busqueda button{
+  background: transparent;
+  width: 10%;
+  cursor: pointer;
+  border: none;
+  border-left: 1px solid gray; 
+  }
+  .caja_busqueda .caja-lista-estilos{
+  right: 0;
+  left: 0;
+  top: 50px;
+  position: absolute;
+  display: none;
+  width: 100%;
+  z-index: 100;
+  background: white;
+  text-align: left;
+  align-items: left;
+  overflow: hidden;
+  padding: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  }
+  .caja_busqueda .caja-lista-estilos.show{
+  display: block;
+  }
+  .caja_busqueda .caja-lista-estilos button{
+  width: 100%;
+  outline: none;
+  border: none;
+  text-align: left;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: small;
+  color: rgb(58, 57, 57);
+  }
+  .caja_busqueda .caja-lista-estilos button:hover{
+  background: rgb(212, 211, 211);
+  }
+  .fa-chevron-down{
+  display: block;
+  transition: .3s;
+  }
+  .fa-chevron-down.active{
+  transform: rotate(-180deg);
+  transition: .5s ;
+  }
+  
+  .carrusel_estilo{
+  padding-top: 1.3cm;
+  }
+  /* --- --- CAROUSEL --- --- */
+  .carousel__contenedor{
+  position: relative;
+  margin: 10px 50px;
+  }
+  
+  .carousel__anterior, 
+  .carousel__siguiente{
+  position: absolute;
+  display: block;
+  font-size: 40px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  top: calc(50% - 20px);
+  cursor: pointer;
+  line-height: 30px;
+  text-align: center;
+  background: none;
+  color: black;
+  opacity: .8;
+  }
+  
+  .carousel__anterior:hover, 
+  .carousel__siguiente:hover{
+  color: gray;
+  opacity: 1;
+  }
+  
+  .carousel__anterior{
+  left: -40px;
+  }
+  .carousel__siguiente{
+  right: -40px;
+  }
+  
+  .carousel__lista{
+  overflow: hidden;
+  }
+  
+  .carousel__elemento{
+  background: black;
+  text-align: center;
+  color: white;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  }
+  .carousel__elemento img{
+  height: 200px;
+  width: 200px;
+  border-radius: 10px;
+  }
+  
+  .carousel__indicadores .glider-dot{
+  display: block;
+  width: 30px;
+  height: 4px;
+  background: black;
+  opacity: .3;
+  border-radius: 0;
+  }
+  
+  .carousel__indicadores .glider-dot:hover{
+  opacity: 1;
+  }
+  
+  .carousel__indicadores .glider-dot.active{
+  background: black;
+  opacity: 1;
+  }
+  
+  /*
+  pagina tatuajes
+  */
+  .caja_busqueda_tatuajes{
+  padding: 20px;
+  margin-top: 70px;
+  text-align: center;
+  }
+  .caja_busqueda_tatuajes h1{
+  font-size: 60px;
+  margin: 30px;
+  }
+  .caja_busqueda_tatuajes .caja-form{
+  display: flex;
+  justify-content: space-between;
+  width: 75%;
+  margin: auto;
+  }
+  .caja_busqueda_tatuajes .caja-form input{
+  width: 90%;
+  height: 50px;
+  margin: 0;
+  border: 0;
+  background: transparent;
+  font-size: 20px;
+  outline: none;
+  }
+  .caja_busqueda_tatuajes .caja-form form{
+  border: 1px solid rgba(128, 128, 128, 0.76);
+  position: relative;
+  height: 50px;
+  padding: 0 15px;
+  border-radius: 25px;
+  width: 88%;
+  display: flex;
+  }
+  .caja_busqueda_tatuajes .caja-form .boton_filtro{
+  width: 10%;
+  border-radius: 25px;
+  background: none;
+  border: 1px solid rgba(128, 128, 128, 0.76);
+  cursor: pointer;
+  }
+  .caja_busqueda_tatuajes .caja-form .boton_filtro span{
+  font-size: 20px;
+  }
+  .caja_filtros{
+  width: 95%;
+  height: 0;
+  margin: auto;
+  transition: height 0.5s ease-in-out;
+  overflow: hidden;
+  }
+  .caja_filtros.active{
+  height: 200px;
+  }
+  
+  .caja_filtros .filtro_cuerpo,
+  .caja_filtros .filtro_estilo {
+  height: 0;
+  transition: height 0.5s ease-in-out;
+  }
+  .caja_filtros .filtro_cuerpo.active,
+  .caja_filtros .filtro_estilo.active {
+  height: 100px;
+  }
+  .caja_filtros .filtro_estilo{
+  z-index: 100;
+  }
+  
+  .caja_filtros div{
+  padding: 10px 0 10px 0;
+  }
+  .caja_filtros .filtro_estilo{
+  border-top: 1px solid rgba(128, 128, 128, 0.76);
+  }
+  .caja_filtros .btn_filtros{
+  padding: 10px;
+  border-radius: 25px;
+  background: none;
+  border: 1px solid rgba(128, 128, 128, 0.76);
+  cursor: pointer;
+  margin: 5px 5px 5px 0;
+  }
+  
+  .caja_filtros div button:hover{
+  background: rgb(99, 85, 85);
+  color: white;
+  }
+  
+  .contenedor_tatuajes{
+  margin-top: 20px;
+  }
+  .contenedor_tatuajes .caja_tatuajes{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  width: 100%;
+  }
+  .contenedor_tatuajes .caja_tatuajes div{
+  margin: 15px;
+  }
+  .contenedor_tatuajes .caja_tatuajes img{
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  }
+  
+  /* Artistas */
+  .contenedor_caja_artistas{
+  display: grid;
+  grid-template-columns: repeat(5,2fr);
+  justify-items: center;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  background: none;
+  }
+  .box{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    background: #060c21;
+    transition: 0.5s;
+  }
+  .box:hover{
+    height: 300px;
+  }
+  .box .imgBx{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+  }
+  .box .imgBx img{
+    max-height: 100%;
+    opacity: 0.4;
+    transition: 0.5s;
+    overflow: hidden;
+    left: -30px;
+  }
+  .box:hover .imgBx img{
+    opacity: 1;
+  }
+  .box::before{
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+    z-index: -1;
+  }
+  .box::after{
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+    z-index: -2;
+    filter: blur(40px);
+  }
+  .box::before,
+  .box::after{
+    background: linear-gradient(235deg,#89ff00,#010615,#00bcd4);
+  }
+  .box:nth-child(2):before,
+  .box:nth-child(2):after{
+    background: linear-gradient(235deg,#ff005e,#010615,#fbff00);
+  }
+  .box:nth-child(3):before,
+  .box:nth-child(3):after{
+    background: linear-gradient(235deg,#2196F3,#010615, #772aff);
+  }
+  .box:nth-child(4):before,
+  .box:nth-child(4):after{
+    background: linear-gradient(235deg,#3cff2a,#010615,#f32121);
+  }
+  
+  .box .Content{
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    height: 90px;
+    background: rgba(0,0,0,.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 0.5s;
+  }
+  .box:hover .Content{
+    opacity: 1;
+    transition: 0.5s;
+  }
+  .box .Content h2{
+    font-size: 20px;
+    color: #fff;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+  .box .Content h2 span{
+    font-size: 14px;
+    color: #fff;
+    font-weight: 200;
+    letter-spacing: 2px;
+  }
+  .box .Content h2 span a{
+    color: darkred;
+  }
+  
+  /*perfil artista*/
+  .caja_perfil{
+  display: flex;
+  padding: 9% 3% 3% 3%;
+  justify-content: space-between;
+  height: 100vh;
+  
+  }
+  .caja_nombre{
+  width: 40%;
+  }
+  .caja_nombre h1{
+  font-size: 10vh;
+  }
+  .caja_nombre p{
+  margin: 10% 0;
+  }
+  .caja_nombre button{
+  height: 8vh;
+  border-radius: 4vh;
+  padding: 1vh 4vh;
+  font-size: 3vh;
+  font-weight: bold;
+  background: black;
+  color: white;
+  cursor: pointer;
+  }
+  .caja_nombre button:hover{
+  background: rgb(102, 5, 180);
+  color: whitesmoke;
+  }
+  .caja_img{
+  width: 45%;
+  overflow: hidden;
+  
+  }
+  .caja_img img{
+  height: 100%;
+  }
+  
+  .caja_busqueda_tatuajes.artista{
+  padding: 10px;
+  margin-top: 10px;
+  text-align: center;
+  }
+  
